@@ -1,0 +1,386 @@
+{
+    "implant_types":
+    [
+        "6_10",
+        "9_10",
+        "6_15",
+        "12_10",
+        "6_20",
+        "12_20"
+    ],
+    "model_types":
+    [
+        "streaky",
+        "pointy"
+    ],
+    "model_types_display_names":
+    {
+        "streaky": "Axon Map",
+        "pointy": "Scoreboard"
+    },
+    "architectures":
+    [
+        "resnet18.a1_in1k",
+        "vit_base_patch16_clip_224.openai",
+        "convnextv2_tiny.fcmae",
+        "convnext_tiny.in12k",
+        "vit_base_patch16_224.augreg2_in21k_ft_in1k",
+        "resnet50d.a1_in1k",
+        "vit_base_patch16_224.dino",
+        "vgg11_bn.tv_in1k",
+        "convnext_nano.in12k",
+        "resnet18d.ra2_in1k",
+        "resnet50.a1_in1k",
+        "vgg16_bn.tv_in1k",
+        "regnety_080.ra3_in1k",
+        "convnext_tiny.in12k_ft_in1k",
+        "regnety_040.ra3_in1k",
+        "vit_small_patch16_224.dino",
+        "convnext_nano.in12k_ft_in1k",
+        "vgg13_bn.tv_in1k",
+        "vit_base_patch8_224.dino",
+        "efficientnet_b3.ra2_in1k",
+        "resnet50.a1h_in1k",
+        "resnet101.a1h_in1k",
+        "mobilenetv2_100.ra_in1k",
+        "convnext_small.in12k",
+        "regnety_064.ra3_in1k",
+        "vgg19_bn.tv_in1k",
+        "efficientnet_b0.ra_in1k",
+        "vit_base_patch16_224.mae"
+    ],
+    "architecture_groupings":
+    {
+        "By Architecture Design":
+        {
+            "CNN":
+            [
+                "resnet18.a1_in1k",
+                "resnet18d.ra2_in1k",
+                "resnet50d.a1_in1k",
+                "resnet50.a1_in1k",
+                "resnet50.a1h_in1k",
+                "resnet101.a1h_in1k",
+                "vgg11_bn.tv_in1k",
+                "vgg13_bn.tv_in1k",
+                "vgg16_bn.tv_in1k",
+                "vgg19_bn.tv_in1k",
+                "regnety_040.ra3_in1k",
+                "regnety_064.ra3_in1k",
+                "regnety_080.ra3_in1k",
+                "mobilenetv2_100.ra_in1k",
+                "efficientnet_b0.ra_in1k",
+                "efficientnet_b3.ra2_in1k"
+            ],
+            "Transformer":
+            [
+                "vit_base_patch16_clip_224.openai",
+                "vit_base_patch16_224.augreg2_in21k_ft_in1k",
+                "vit_base_patch16_224.dino",
+                "vit_small_patch16_224.dino",
+                "vit_base_patch8_224.dino",
+                "vit_base_patch16_224.mae"            ],
+            "Hybrid CNN + Transformer (ConvNeXt)":
+            [
+                "convnextv2_tiny.fcmae",
+                "convnext_tiny.in12k",
+                "convnext_nano.in12k",
+                "convnext_tiny.in12k_ft_in1k",
+                "convnext_nano.in12k_ft_in1k",
+                "convnext_small.in12k"
+            ]
+        },
+        "By Training Dataset":
+        {
+            "IN1K (ImageNet-1k)":
+            [
+                "resnet18.a1_in1k",
+                "resnet50d.a1_in1k",
+                "resnet50.a1_in1k",
+                "resnet50.a1h_in1k",
+                "resnet101.a1h_in1k",
+                "vgg11_bn.tv_in1k",
+                "vgg13_bn.tv_in1k",
+                "vgg16_bn.tv_in1k",
+                "vgg19_bn.tv_in1k",
+                "regnety_040.ra3_in1k",
+                "regnety_064.ra3_in1k",
+                "regnety_080.ra3_in1k",
+                "mobilenetv2_100.ra_in1k",
+                "efficientnet_b0.ra_in1k",
+                "efficientnet_b3.ra2_in1k",
+                "vit_base_patch16_224.augreg2_in21k_ft_in1k",
+                "vit_base_patch16_224.dino",
+                "vit_small_patch16_224.dino",
+                "vit_base_patch8_224.dino"
+            ],
+            "IN12K (ImageNet-12k)":
+            [
+                "convnext_tiny.in12k",
+                "convnext_nano.in12k",
+                "convnext_small.in12k"
+            ],
+            "IN12K → finetuned on IN1K":
+            [
+                "convnext_tiny.in12k_ft_in1k",
+                "convnext_nano.in12k_ft_in1k"
+            ],
+            "IN21K (ImageNet-21k)":
+            [
+                "vit_base_patch16_224.augreg2_in21k_ft_in1k"
+            ],
+            "CLIP Pretraining (large text-image data)":
+            [
+                "vit_base_patch16_clip_224.openai"
+            ],
+            "Self-supervised (MIM, DINO, MAE)":
+            [
+                "convnextv2_tiny.fcmae",
+                "vit_base_patch16_224.dino",
+                "vit_small_patch16_224.dino",
+                "vit_base_patch8_224.dino",
+                "vit_base_patch16_224.mae"
+            ]
+        },
+        "By Training Method":
+        {
+            "Supervised":
+            [
+                "resnet18.a1_in1k",
+                "resnet50d.a1_in1k",
+                "resnet50.a1_in1k",
+                "resnet50.a1h_in1k",
+                "resnet101.a1h_in1k",
+                "vgg11_bn.tv_in1k",
+                "vgg13_bn.tv_in1k",
+                "vgg16_bn.tv_in1k",
+                "vgg19_bn.tv_in1k",
+                "regnety_040.ra3_in1k",
+                "regnety_064.ra3_in1k",
+                "regnety_080.ra3_in1k",
+                "mobilenetv2_100.ra_in1k",
+                "efficientnet_b0.ra_in1k",
+                "efficientnet_b3.ra2_in1k",
+                "convnext_tiny.in12k",
+                "convnext_nano.in12k",
+                "convnext_small.in12k"
+            ],
+            "Self-supervised (SSL)":
+            [
+                "vit_base_patch16_224.dino",
+                "vit_small_patch16_224.dino",
+                "vit_base_patch8_224.dino",
+                "vit_base_patch16_224.mae",
+                "convnextv2_tiny.fcmae"
+            ],
+            "Contrastive + Text Supervision":
+            [
+                "vit_base_patch16_clip_224.openai"
+            ],
+            "Fine-tuned Models":
+            [
+                "convnext_tiny.in12k_ft_in1k",
+                "convnext_nano.in12k_ft_in1k",
+                "vit_base_patch16_224.augreg2_in21k_ft_in1k"
+            ]
+        },
+        "By Model Family":
+        {
+            "ResNet":
+            [
+                "resnet18.a1_in1k",
+                "resnet18d.ra2_in1k",
+                "resnet50d.a1_in1k",
+                "resnet50.a1_in1k",
+                "resnet50.a1h_in1k",
+                "resnet101.a1h_in1k"
+            ],
+            "VGG":
+            [
+                "vgg11_bn.tv_in1k",
+                "vgg13_bn.tv_in1k",
+                "vgg16_bn.tv_in1k",
+                "vgg19_bn.tv_in1k"
+            ],
+            "EfficientNet":
+            [
+                "efficientnet_b0.ra_in1k",
+                "efficientnet_b3.ra2_in1k"
+            ],
+            "RegNetY":
+            [
+                "regnety_040.ra3_in1k",
+                "regnety_064.ra3_in1k",
+                "regnety_080.ra3_in1k"
+            ],
+            "MobileNetV2":
+            [
+                "mobilenetv2_100.ra_in1k"
+            ],
+            "Vision Transformer (ViT)":
+            [
+                "vit_base_patch16_clip_224.openai",
+                "vit_base_patch16_224.augreg2_in21k_ft_in1k",
+                "vit_base_patch16_224.dino",
+                "vit_small_patch16_224.dino",
+                "vit_base_patch8_224.dino",
+                "vit_base_patch16_224.mae"
+            ],
+            "ConvNeXt":
+            [
+                "convnextv2_tiny.fcmae",
+                "convnext_tiny.in12k",
+                "convnext_nano.in12k",
+                "convnext_tiny.in12k_ft_in1k",
+                "convnext_nano.in12k_ft_in1k",
+                "convnext_small.in12k"
+            ]
+        }
+    },
+    "tasks":
+    {
+        "shape":
+        {
+            "display_name": "Shape ID",
+            "metadata": "data/shape/metadata.csv",
+            "corrupted_files_to_ignore":
+            [
+                "2573.tif",
+                "30417.tif",
+                "36650.tif",
+                "39087.tif",
+                "40862.tif",
+                "44135.tif",
+                "5152.tif",
+                "8186.tif"
+            ],
+            "zip_path": "data/shape/percepts.zip",
+            "data_split_path": "data/shape/train_test.json",
+            "target_col": "Shape Type",
+            "IDKey": "IdentifiedObject",
+            "subject_data_path": "SubjectData/{subject}/Study1/{implant}/{model}/data.json",
+            "subjects":
+            [
+                "ABa",
+                "URa",
+                "ANa",
+                "BAa",
+                "AZa",
+                "EBa",
+                "JHa",
+                "KMa",
+                "ZZa",
+                "EKa",
+                "AWa",
+                "PBa"
+            ],
+            "labels":
+            [
+                "circle",
+                "square",
+                "triangle"
+            ]
+        },
+        "emotion":
+        {
+            "display_name": "Emotion ID",
+            "metadata": "data/emotion/metadata.csv",
+            "zip_path": "data/emotion/percepts.zip",
+            "data_split_path": "data/emotion/train_test.json",
+            "filename_mapping": "data/emotion/mappings/filename_mapping.json",
+            "target_col": "emotion",
+            "IDKey": "IdentifiedEmotion",
+            "subject_data_path": "SubjectData/{subject}/Study2/{implant}/{model}/Zoom/data.json",
+            "subjects":
+            [
+                "ABa",
+                "AZa",
+                "AWa",
+                "ANa",
+                "EKa",
+                "EBa",
+                "BAa",
+                "GSa",
+                "ECa",
+                "LEa",
+                "EDa",
+                "URa"
+            ],
+            "labels":
+            [
+                "happy",
+                "neutral"
+            ]
+        },
+        "doorway":
+        {
+            "display_name": "Doorway Location",
+            "metadata": "data/doorway/metadata.csv",
+            "data_split_path": "data/doorway/train_test.json",
+            "target_col": "door_direction",
+            "IDKey": "DoorDirection",
+            "subject_data_path": "SubjectData/{subject}/Study3/{implant}/{model}/data.json",
+            "subjects":
+            [
+                "ABa",
+                "NHa",
+                "ANa",
+                "BAa",
+                "GNa",
+                "AWa",
+                "GSa",
+                "KMa",
+                "LEa",
+                "JHa",
+                "URa",
+                "AZa"
+            ],
+            "zip_path": "data/doorway/percepts.zip",
+            "filename_mapping": "data/doorway/mappings/filename_mapping.json",
+            "labels":
+            [
+                "left",
+                "right"
+            ]
+        },
+        "window_side":
+        {
+            "display_name": "Window Location",
+            "metadata": "data/window_side/metadata.csv",
+            "zip_path": "data/window_side/percepts.zip",
+            "data_split_path": "data/window_side/train_test.json",
+            "target_col": "window_direction",
+            "labels":
+            [
+                "left",
+                "right"
+            ]
+        },
+        "person_facing_direction":
+        {
+            "display_name": "Person Facing Direction",
+            "metadata": "data/person_facing_direction/metadata.csv",
+            "zip_path": "data/person_facing_direction/percepts.zip",
+            "data_split_path": "data/person_facing_direction/train_test.json",
+            "target_col": "facing",
+            "labels":
+            [
+                "forward",
+                "backward"
+            ]
+        },
+        "locate_person":
+        {
+            "display_name": "Person Location",
+            "metadata": "data/locate_person/metadata.csv",
+            "zip_path": "data/locate_person/percepts.zip",
+            "data_split_path": "data/locate_person/train_test.json",
+            "target_col": "person_direction",
+            "labels":
+            [
+                "left",
+                "right"
+            ]
+        }
+    }
+}

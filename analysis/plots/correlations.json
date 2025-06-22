@@ -1,0 +1,30 @@
+{
+    "ConvNeXt": {
+        "spearman_correlation": 0.8612099966813823,
+        "pearson_correlation": 0.9093341964683361
+    },
+    "EfficientNet": {
+        "spearman_correlation": 0.8854523142998932,
+        "pearson_correlation": 0.9361653753807079
+    },
+    "MobileNetV2": {
+        "spearman_correlation": 0.8895579664527521,
+        "pearson_correlation": 0.9439937595402862
+    },
+    "RegNetY": {
+        "spearman_correlation": 0.8613279302658695,
+        "pearson_correlation": 0.9467135425681337
+    },
+    "ResNet": {
+        "spearman_correlation": 0.8926324569171538,
+        "pearson_correlation": 0.9521947892114005
+    },
+    "VGG": {
+        "spearman_correlation": 0.8924516991304777,
+        "pearson_correlation": 0.9622098300908063
+    },
+    "Vision Transformer (ViT)": {
+        "spearman_correlation": 0.8719853008843986,
+        "pearson_correlation": 0.9308608425947954
+    }
+}

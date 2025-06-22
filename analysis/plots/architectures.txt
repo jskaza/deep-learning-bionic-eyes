@@ -1,0 +1,8 @@
+ConvNeXt
+EfficientNet
+MobileNetV2
+RegNetY
+ResNet
+VGG
+Vision Transformer (ViT)
+human

@@ -1,0 +1,14 @@
+{
+    "shape": {
+        "n_subjects": 12,
+        "n_trials": 240
+    },
+    "emotion": {
+        "n_subjects": 12,
+        "n_trials": 120
+    },
+    "doorway": {
+        "n_subjects": 12,
+        "n_trials": 288
+    }
+}
