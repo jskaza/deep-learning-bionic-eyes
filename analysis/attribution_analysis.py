@@ -10,7 +10,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 import torchvision.transforms as T
-from captum.attr import Saliency, LayerGradCam, IntegratedGradients
+from captum.attr import Saliency, LayerGradCam
 from PIL import Image
 from torch.utils.data import DataLoader, Dataset, TensorDataset
 import zipfile
@@ -218,27 +218,7 @@ class GradCAM:
         attribution = F.interpolate(attribution, x.shape[2:], mode='bilinear', align_corners=False)
         
         return attribution.squeeze().cpu().detach().numpy()
-
-class IntegratedGradsAttr:
-    def __init__(self, model: nn.Module):
-        self.ig = IntegratedGradients(model)
-        self.model = model.eval()
-        
-    def __call__(self, x: torch.Tensor, target_idx: int):
-        # Create a baseline (black image)
-        baseline = torch.zeros_like(x)
-        
-        # Compute integrated gradients
-        attribution = self.ig.attribute(x, baseline, target=target_idx, n_steps=50)
-        
-        # Take absolute value and sum across color channels
-        attribution = attribution.abs().sum(dim=1, keepdim=True)
-        
-        # Normalize
-        attribution = attribution / (attribution.max() + 1e-8)
-        
-        return attribution.squeeze().cpu().detach().numpy()
-
+    
 def overlay(attribution, img):
     # Convert attribution to heatmap
     heat = plt.cm.magma(attribution)[...,:3]
@@ -284,22 +264,23 @@ def human_consensus(df: pd.DataFrame, min_subj=5):
     rows=[]
     for _,r in cnt.iterrows():
         sub = df[(df.percept_filename==r.percept_filename)&
-                 (df.implant_type==r.implant_type)&
-                 (df.model_type  ==r.model_type)]
+                 (df.implant_type == r.implant_type)&
+                 (df.model_type  == r.model_type)]
         rows.append({'percept_filename':r.percept_filename,'implant_type':r.implant_type,
-                     'model_type':r.model_type,'human_consensus':sub.guess.mode()[0],
+                     'model_type':r.model_type,'human_consensus':sub.guess.mode()[0], 
+                     'human_consensus_confidence':sub.guess.value_counts().max()/r.n,
                      'ground_truth':sub.target.iloc[0],'num_subjects':r.n})
     return pd.DataFrame(rows)
 
 # ============  MAIN EXPERIMENT  ================================
 
-def leave_one_out(task, implant, mtype, device, cfg, sample_size=10):
+def leave_one_out(task, implant, mtype, device, cfg, sample_size=5, min_confidence=0.8):
     hdf = load_human_trials(task)
     hdf = hdf[(hdf.implant_type==implant)&(hdf.model_type==mtype)]
     if hdf.empty: return None
     cdf = human_consensus(hdf)
     if cdf.empty: return None
-    elig = cdf[cdf.human_consensus != cdf.ground_truth]
+    elig = cdf[(cdf.human_consensus != cdf.ground_truth) & (cdf.human_consensus_confidence > min_confidence)]
     sel = elig.sample(n=min(sample_size,len(elig)), random_state=42)
 
     zip_path = Path(__file__).parent.parent / cfg['tasks'][task]['zip_path']
@@ -346,8 +327,12 @@ def leave_one_out(task, implant, mtype, device, cfg, sample_size=10):
             return DataLoader(ds, 8, shuffle=True, num_workers=0, pin_memory=True,
                               generator=g)
 
-        # Create our custom CNN models
+        # Create our custom CNN models with same initialization
+        # Set seed to ensure both models start with identical weights
+        torch.manual_seed(42)
         gt_model = SimpleCNN(num_classes=len(gt_map))
+        
+        torch.manual_seed(42)  # Reset seed to get same initialization
         hc_model = SimpleCNN(num_classes=len(hc_map))
         
         # Move models to device
@@ -444,7 +429,6 @@ def leave_one_out(task, implant, mtype, device, cfg, sample_size=10):
             
             gt_saliency = SaliencyMapAttr(gt_model)
             gt_gradcam = GradCAM(gt_model)
-            gt_ig = IntegratedGradsAttr(gt_model)
             
             print("Generating ground truth model attributions...")
             # Check if input tensor has valid values
@@ -454,7 +438,6 @@ def leave_one_out(task, implant, mtype, device, cfg, sample_size=10):
             gt_attributions = {
                 "Saliency": gt_saliency(heldout_img, pred_gt),
                 "GradCAM": gt_gradcam(heldout_img, pred_gt),
-                "IntegratedGrads": gt_ig(heldout_img, pred_gt)
             }
             
             print("Ground truth attributions generated successfully")
@@ -463,14 +446,12 @@ def leave_one_out(task, implant, mtype, device, cfg, sample_size=10):
             print("Initializing human consensus attribution methods...")
             hc_saliency = SaliencyMapAttr(hc_model)
             hc_gradcam = GradCAM(hc_model)
-            hc_ig = IntegratedGradsAttr(hc_model)
             
             print("Generating human consensus model attributions...")
             # Generate human consensus model attributions
             hc_attributions = {
                 "Saliency": hc_saliency(heldout_img, pred_hc),
                 "GradCAM": hc_gradcam(heldout_img, pred_hc),
-                "IntegratedGrads": hc_ig(heldout_img, pred_hc)
             }
             
             print("Human consensus attributions generated successfully")
@@ -479,6 +460,10 @@ def leave_one_out(task, implant, mtype, device, cfg, sample_size=10):
             print("Creating comparison visualizations...")
             print(gt_map_rev[pred_gt], label_gt, hc_map_rev[pred_hc], label_hc)
             if gt_map_rev[pred_gt] == label_gt and hc_map_rev[pred_hc] == label_hc:
+                # Calculate human consensus as fraction
+                num_agreeing = int(row.human_consensus_confidence * row.num_subjects)
+                confidence_fraction = f"{num_agreeing}/{row.num_subjects}"
+                
                 for method_name in gt_attributions.keys():
                     comparison = {
                         f"Ground Truth {method_name}": gt_attributions[method_name],
@@ -488,9 +473,9 @@ def leave_one_out(task, implant, mtype, device, cfg, sample_size=10):
                         heldout_img.squeeze(0),
                         comparison,
                         {
-                            'orig': f"Original Percept: Ground Truth→{label_gt}, Human Consensus→{label_hc}",
+                            'orig': f"Original Percept: Ground Truth→{label_gt}, Human Consensus→{label_hc} ({confidence_fraction})",
                             f'ground truth {method_name.lower()}': f"Ground Truth {gt_map_rev[pred_gt]}",
-                            f'human consensus {method_name.lower()}': f"Human Consensus {hc_map_rev[pred_hc]}"
+                            f'human consensus {method_name.lower()}': f"Human Consensus {hc_map_rev[pred_hc]} ({confidence_fraction})"
                         },
                         f"plots/attributions/{task}_{implant}_{mtype}_{row.percept_filename.replace('.tif','')}_compare_{method_name.lower()}.pdf"
                     )

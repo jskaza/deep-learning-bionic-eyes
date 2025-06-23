@@ -18,7 +18,7 @@ sns.despine(top=True, right=True)
 def _run_bootstrap_analysis(
     stim2A: Dict[str, np.ndarray],
     stim2B: Dict[str, np.ndarray],
-    n_bootstrap: int = 10_000,
+    n_bootstrap: int = 1_000,
     correct_threshold: float = 0.5,
     rng: np.random.Generator = None
 ) -> Tuple[float, Tuple[float, float], float, Tuple[float, float], np.ndarray, np.ndarray]:
@@ -126,7 +126,7 @@ def _run_bootstrap_analysis(
 def bootstrap_consensus_metrics(
     stim2A: Dict[str, np.ndarray],
     stim2B: Dict[str, np.ndarray] = None,
-    n_bootstrap: int = 10_000,
+    n_bootstrap: int = 1_000,
     seed: int = None
 ) -> Tuple[float, Tuple[float, float], float, Tuple[float, float], np.ndarray, np.ndarray]:
     """
@@ -239,7 +239,7 @@ def bootstrap_consensus_metrics(
 def paired_bootstrap_jaccard(
     stim2_human: Dict[str, np.ndarray],
     stim2_model: Dict[str, np.ndarray],
-    n_bootstrap: int = 10_000,
+    n_bootstrap: int = 1_000,
     correct_threshold: float = 0.5,
     rng: np.random.Generator | None = None,
 ):
