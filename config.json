@@ -1,0 +1,225 @@
+{
+    "implant_types": [
+        "6_10",
+        "9_10",
+        "6_15",
+        "12_10",
+        "6_20",
+        "12_20"
+    ],
+    "model_types": [
+        "streaky",
+        "pointy"
+    ],
+    "model_types_display_names": {
+        "streaky": "Axon Map",
+        "pointy": "Scoreboard"
+    },
+    "num_epochs": 30,
+    "lr": 1e-3,
+    "head_lr": 1e-4,
+    "backbone_lr": 1e-5,
+    "batch_size": 32,
+    "num_runs": 10,
+    "architectures": [
+        {
+            "name": "resnet18",
+            "display_name": "ResNet18",
+            "full_model": true
+        },
+        {
+            "name": "resnet50",
+            "display_name": "ResNet50",
+            "full_model": true
+        },
+        {
+            "name": "vgg11_bn",
+            "display_name": "VGG11",
+            "full_model": true
+        },
+        {
+            "name": "vgg13_bn",
+            "display_name": "VGG13",
+            "full_model": true
+        },
+        {
+            "name": "vgg16_bn",
+            "display_name": "VGG16",
+            "full_model": true
+        },
+        {
+            "name": "vgg19_bn",
+            "display_name": "VGG19",
+            "full_model": true
+        },
+        {
+            "name": "vit_base_patch16_224",
+            "display_name": "ViT Base",
+            "full_model": true
+        },
+        {
+            "name": "vit_large_patch16_224",
+            "display_name": "ViT Large",
+            "full_model": true
+        },
+        {
+            "name": "vit_small_patch16_224",
+            "display_name": "ViT Small",
+            "full_model": true
+        },
+        {
+            "name": "vit_base_patch16_dinov3.lvd1689m",
+            "display_name": "DINOv3 ViT Base",
+            "full_model": true
+        },
+        {
+            "name": "convnext_tiny",
+            "display_name": "ConvNeXt Tiny",
+            "full_model": true
+        },
+        {
+            "name": "convnext_small",
+            "display_name": "ConvNeXt Small",
+            "full_model": true
+        },
+        {
+            "name": "convnext_base",
+            "display_name": "ConvNeXt Base",
+            "full_model": true
+        },
+        {
+            "name": "convnext_large",
+            "display_name": "ConvNeXt Large",
+            "full_model": true
+        }
+    ],
+    "tasks": {
+        "shape": {
+            "display_name": "Shape ID",
+            "metadata": "data/shape/metadata.csv",
+            "corrupted_files_to_ignore": [
+                "2573.tif",
+                "30417.tif",
+                "36650.tif",
+                "39087.tif",
+                "40862.tif",
+                "44135.tif",
+                "5152.tif",
+                "8186.tif"
+            ],
+            "zip_path": "data/shape/percepts.zip",
+            "data_split_path": "data/shape/train_test.json",
+            "target_col": "Shape Type",
+            "IDKey": "IdentifiedObject",
+            "subject_data_path": "SubjectData/{subject}/Study1/{implant}/{model}/data.json",
+            "subjects": [
+                "ABa",
+                "URa",
+                "ANa",
+                "BAa",
+                "AZa",
+                "EBa",
+                "JHa",
+                "KMa",
+                "ZZa",
+                "EKa",
+                "AWa",
+                "PBa"
+            ],
+            "labels": [
+                "circle",
+                "square",
+                "triangle"
+            ]
+        },
+        "emotion": {
+            "display_name": "Emotion ID",
+            "metadata": "data/emotion/metadata.csv",
+            "zip_path": "data/emotion/percepts.zip",
+            "data_split_path": "data/emotion/train_test.json",
+            "filename_mapping": "data/emotion/mappings/filename_mapping.json",
+            "target_col": "emotion",
+            "IDKey": "IdentifiedEmotion",
+            "subject_data_path": "SubjectData/{subject}/Study2/{implant}/{model}/Zoom/data.json",
+            "subjects": [
+                "ABa",
+                "AZa",
+                "AWa",
+                "ANa",
+                "EKa",
+                "EBa",
+                "BAa",
+                "GSa",
+                "ECa",
+                "LEa",
+                "EDa",
+                "URa"
+            ],
+            "labels": [
+                "happy",
+                "neutral"
+            ]
+        },
+        "doorway": {
+            "display_name": "Doorway Location",
+            "metadata": "data/doorway/metadata.csv",
+            "data_split_path": "data/doorway/train_test.json",
+            "target_col": "door_direction",
+            "IDKey": "DoorDirection",
+            "subject_data_path": "SubjectData/{subject}/Study3/{implant}/{model}/data.json",
+            "subjects": [
+                "ABa",
+                "NHa",
+                "ANa",
+                "BAa",
+                "GNa",
+                "AWa",
+                "GSa",
+                "KMa",
+                "LEa",
+                "JHa",
+                "URa",
+                "AZa"
+            ],
+            "zip_path": "data/doorway/percepts.zip",
+            "filename_mapping": "data/doorway/mappings/filename_mapping.json",
+            "labels": [
+                "left",
+                "right"
+            ]
+        },
+        "window_side": {
+            "display_name": "Window Location",
+            "metadata": "data/window_side/metadata.csv",
+            "zip_path": "data/window_side/percepts.zip",
+            "data_split_path": "data/window_side/train_test.json",
+            "target_col": "window_direction",
+            "labels": [
+                "left",
+                "right"
+            ]
+        },
+        "person_facing_direction": {
+            "display_name": "Person Facing Direction",
+            "metadata": "data/person_facing_direction/metadata.csv",
+            "zip_path": "data/person_facing_direction/percepts.zip",
+            "data_split_path": "data/person_facing_direction/train_test.json",
+            "target_col": "facing",
+            "labels": [
+                "forward",
+                "backward"
+            ]
+        },
+        "locate_person": {
+            "display_name": "Person Location",
+            "metadata": "data/locate_person/metadata.csv",
+            "zip_path": "data/locate_person/percepts.zip",
+            "data_split_path": "data/locate_person/train_test.json",
+            "target_col": "person_direction",
+            "labels": [
+                "left",
+                "right"
+            ]
+        }
+    }
+}
