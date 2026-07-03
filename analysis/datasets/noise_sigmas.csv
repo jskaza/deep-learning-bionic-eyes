@@ -1,0 +1,393 @@
+task,architecture,implant_type,model_type,sigma
+doorway,ConvNeXt Base,12_10,pointy,0.536691137518361
+doorway,ConvNeXt Base,12_10,streaky,0.6348403002221696
+doorway,ConvNeXt Base,12_20,pointy,0.5550952108829817
+doorway,ConvNeXt Base,12_20,streaky,0.5528088499071304
+doorway,ConvNeXt Base,6_10,pointy,0.5101901170714458
+doorway,ConvNeXt Base,6_10,streaky,0.6333966424347681
+doorway,ConvNeXt Base,6_15,pointy,0.5834222430716164
+doorway,ConvNeXt Base,6_15,streaky,0.5926142560619361
+doorway,ConvNeXt Base,6_20,pointy,0.5629665879173912
+doorway,ConvNeXt Base,6_20,streaky,0.5172861256494714
+doorway,ConvNeXt Base,9_10,pointy,0.5316328918397966
+doorway,ConvNeXt Base,9_10,streaky,0.588447135508658
+doorway,ConvNeXt Large,12_10,pointy,0.6848511655323216
+doorway,ConvNeXt Large,12_10,streaky,0.6605431046491099
+doorway,ConvNeXt Large,12_20,pointy,0.6357781059685643
+doorway,ConvNeXt Large,12_20,streaky,0.705006107508556
+doorway,ConvNeXt Large,6_10,pointy,0.6489334470379976
+doorway,ConvNeXt Large,6_10,streaky,0.6269082589549233
+doorway,ConvNeXt Large,6_15,pointy,0.6559929335706155
+doorway,ConvNeXt Large,6_15,streaky,0.6723863219586332
+doorway,ConvNeXt Large,6_20,pointy,0.6436775294662272
+doorway,ConvNeXt Large,6_20,streaky,0.6212785827844651
+doorway,ConvNeXt Large,9_10,pointy,0.6023313890620736
+doorway,ConvNeXt Large,9_10,streaky,0.6259978201977787
+doorway,ConvNeXt Small,12_10,pointy,0.7666180861674854
+doorway,ConvNeXt Small,12_10,streaky,0.7934832530913867
+doorway,ConvNeXt Small,12_20,pointy,0.6966782656460568
+doorway,ConvNeXt Small,12_20,streaky,0.9034454647809814
+doorway,ConvNeXt Small,6_10,pointy,0.957991028967325
+doorway,ConvNeXt Small,6_10,streaky,0.8147223299615152
+doorway,ConvNeXt Small,6_15,pointy,0.9525556704261546
+doorway,ConvNeXt Small,6_15,streaky,0.9070028418357927
+doorway,ConvNeXt Small,6_20,pointy,1.0105723187608344
+doorway,ConvNeXt Small,6_20,streaky,1.0723765015298274
+doorway,ConvNeXt Small,9_10,pointy,0.7728113335494189
+doorway,ConvNeXt Small,9_10,streaky,0.9281355822531314
+doorway,ConvNeXt Tiny,12_10,pointy,0.7332855979592099
+doorway,ConvNeXt Tiny,12_10,streaky,0.8685124235238131
+doorway,ConvNeXt Tiny,12_20,pointy,0.9195313306382484
+doorway,ConvNeXt Tiny,12_20,streaky,0.9094606461152744
+doorway,ConvNeXt Tiny,6_10,pointy,0.9179674449798538
+doorway,ConvNeXt Tiny,6_10,streaky,0.8912295974691888
+doorway,ConvNeXt Tiny,6_15,pointy,0.9592918964250174
+doorway,ConvNeXt Tiny,6_15,streaky,0.8255072970744276
+doorway,ConvNeXt Tiny,6_20,pointy,0.8746677800153665
+doorway,ConvNeXt Tiny,6_20,streaky,0.8964684894829308
+doorway,ConvNeXt Tiny,9_10,pointy,0.8144526491679613
+doorway,ConvNeXt Tiny,9_10,streaky,0.897605370699684
+doorway,DINOv3 ViT Base,12_10,pointy,0.24506116818468546
+doorway,DINOv3 ViT Base,12_10,streaky,0.1794592084833318
+doorway,DINOv3 ViT Base,12_20,pointy,0.2116009730842004
+doorway,DINOv3 ViT Base,12_20,streaky,0.1474154517396673
+doorway,DINOv3 ViT Base,6_10,pointy,0.316504731891184
+doorway,DINOv3 ViT Base,6_10,streaky,0.19962548995399407
+doorway,DINOv3 ViT Base,6_15,pointy,0.3584718058227344
+doorway,DINOv3 ViT Base,6_15,streaky,0.19148321005480862
+doorway,DINOv3 ViT Base,6_20,pointy,1.965311935145957
+doorway,DINOv3 ViT Base,6_20,streaky,0.15339459729088856
+doorway,DINOv3 ViT Base,9_10,pointy,0.2968493458643206
+doorway,DINOv3 ViT Base,9_10,streaky,0.1770703760583128
+doorway,ResNet18,12_10,pointy,0.5640312471757831
+doorway,ResNet18,12_10,streaky,0.5629425656020781
+doorway,ResNet18,12_20,pointy,0.6825730612598624
+doorway,ResNet18,12_20,streaky,0.6703431988949485
+doorway,ResNet18,6_10,pointy,0.5074614621840841
+doorway,ResNet18,6_10,streaky,0.5172278039597205
+doorway,ResNet18,6_15,pointy,0.605284362403775
+doorway,ResNet18,6_15,streaky,0.61766183242562
+doorway,ResNet18,6_20,pointy,0.598885959775115
+doorway,ResNet18,6_20,streaky,0.6272643038329189
+doorway,ResNet18,9_10,pointy,0.5471844179235276
+doorway,ResNet18,9_10,streaky,0.5580398494850867
+doorway,ResNet50,12_10,pointy,0.5543222958990772
+doorway,ResNet50,12_10,streaky,0.5517608337942478
+doorway,ResNet50,12_20,pointy,0.6860330399841612
+doorway,ResNet50,12_20,streaky,0.6651111607022914
+doorway,ResNet50,6_10,pointy,0.5126927411710567
+doorway,ResNet50,6_10,streaky,0.5202324102047292
+doorway,ResNet50,6_15,pointy,0.6659772403725329
+doorway,ResNet50,6_15,streaky,0.6330723608585836
+doorway,ResNet50,6_20,pointy,0.6677014515032114
+doorway,ResNet50,6_20,streaky,0.6728551576906576
+doorway,ResNet50,9_10,pointy,0.5570089700661303
+doorway,ResNet50,9_10,streaky,0.5700797389128475
+doorway,VGG11,12_10,pointy,0.9877064445648073
+doorway,VGG11,12_10,streaky,0.9618182665462764
+doorway,VGG11,12_20,pointy,1.2193452594119187
+doorway,VGG11,12_20,streaky,1.0924292048318929
+doorway,VGG11,6_10,pointy,0.9624892514602279
+doorway,VGG11,6_10,streaky,1.0167723468784016
+doorway,VGG11,6_15,pointy,1.1426028600388551
+doorway,VGG11,6_15,streaky,1.1207420754200184
+doorway,VGG11,6_20,pointy,1.1567498940626062
+doorway,VGG11,6_20,streaky,1.1064282999745565
+doorway,VGG11,9_10,pointy,0.9435367162070675
+doorway,VGG11,9_10,streaky,0.9977910522768925
+doorway,VGG13,12_10,pointy,1.0181567875952853
+doorway,VGG13,12_10,streaky,1.0396248793947103
+doorway,VGG13,12_20,pointy,1.0967010963531498
+doorway,VGG13,12_20,streaky,1.0323210100437827
+doorway,VGG13,6_10,pointy,0.9697076350915227
+doorway,VGG13,6_10,streaky,0.8661118450700817
+doorway,VGG13,6_15,pointy,1.2503886451925357
+doorway,VGG13,6_15,streaky,1.0941592764889474
+doorway,VGG13,6_20,pointy,1.1002326870607153
+doorway,VGG13,6_20,streaky,1.2161565135711294
+doorway,VGG13,9_10,pointy,0.9286515665008082
+doorway,VGG13,9_10,streaky,1.1633464495825778
+doorway,VGG16,12_10,pointy,0.9546435339969105
+doorway,VGG16,12_10,streaky,1.2465066282909445
+doorway,VGG16,12_20,pointy,1.0833199111627891
+doorway,VGG16,12_20,streaky,0.9507200203752405
+doorway,VGG16,6_10,pointy,1.045392397843591
+doorway,VGG16,6_10,streaky,0.8896972446067759
+doorway,VGG16,6_15,pointy,1.181491440364681
+doorway,VGG16,6_15,streaky,1.1181058436065987
+doorway,VGG16,6_20,pointy,1.2847182086720847
+doorway,VGG16,6_20,streaky,1.0249226639671574
+doorway,VGG16,9_10,pointy,0.9321223468232411
+doorway,VGG16,9_10,streaky,1.0098091804637437
+doorway,VGG19,12_10,pointy,0.9344397792512178
+doorway,VGG19,12_10,streaky,1.1105155825755826
+doorway,VGG19,12_20,pointy,1.0110067243937433
+doorway,VGG19,12_20,streaky,0.9780948004899969
+doorway,VGG19,6_10,pointy,0.915600016623533
+doorway,VGG19,6_10,streaky,0.9260320552049571
+doorway,VGG19,6_15,pointy,1.1258243239406711
+doorway,VGG19,6_15,streaky,1.0746016864937256
+doorway,VGG19,6_20,pointy,1.0329658249485623
+doorway,VGG19,6_20,streaky,0.9477414749504685
+doorway,VGG19,9_10,pointy,0.8782638704555873
+doorway,VGG19,9_10,streaky,0.9493191783273628
+doorway,ViT Base,12_10,pointy,1.0303307616254913
+doorway,ViT Base,12_10,streaky,1.2947625589532326
+doorway,ViT Base,12_20,pointy,1.2759295520964113
+doorway,ViT Base,12_20,streaky,0.973557841820247
+doorway,ViT Base,6_10,pointy,1.200181020160852
+doorway,ViT Base,6_10,streaky,0.9781632432457456
+doorway,ViT Base,6_15,pointy,1.079332325708642
+doorway,ViT Base,6_15,streaky,1.3125382406497683
+doorway,ViT Base,6_20,pointy,1.1187412371175423
+doorway,ViT Base,6_20,streaky,1.217015628689661
+doorway,ViT Base,9_10,pointy,0.9802068199281873
+doorway,ViT Base,9_10,streaky,1.039315334170964
+doorway,ViT Large,12_10,pointy,1.3283728540570123
+doorway,ViT Large,12_10,streaky,1.5295161787418947
+doorway,ViT Large,12_20,pointy,1.244169135665211
+doorway,ViT Large,12_20,streaky,1.5622672742602628
+doorway,ViT Large,6_10,pointy,1.511128282986312
+doorway,ViT Large,6_10,streaky,1.242584822916958
+doorway,ViT Large,6_15,pointy,1.3651101887932837
+doorway,ViT Large,6_15,streaky,1.4225101286180784
+doorway,ViT Large,6_20,pointy,1.3740715940680184
+doorway,ViT Large,6_20,streaky,1.3405027797866915
+doorway,ViT Large,9_10,pointy,1.635797789622833
+doorway,ViT Large,9_10,streaky,1.5635372803349528
+doorway,ViT Small,12_10,pointy,0.7924786799752462
+doorway,ViT Small,12_10,streaky,0.7353697481088868
+doorway,ViT Small,12_20,pointy,0.820094599400384
+doorway,ViT Small,12_20,streaky,0.7619714834867095
+doorway,ViT Small,6_10,pointy,0.819363355897232
+doorway,ViT Small,6_10,streaky,0.740335450949155
+doorway,ViT Small,6_15,pointy,0.7874593621793452
+doorway,ViT Small,6_15,streaky,0.7226778897755592
+doorway,ViT Small,6_20,pointy,0.870839714523064
+doorway,ViT Small,6_20,streaky,0.7083523470811712
+doorway,ViT Small,9_10,pointy,0.8870421857919486
+doorway,ViT Small,9_10,streaky,0.8044669859858913
+emotion,ConvNeXt Base,12_20,pointy,2.816112099718802
+emotion,ConvNeXt Base,12_20,streaky,3.102424551389188
+emotion,ConvNeXt Base,6_15,pointy,3.238365298837369
+emotion,ConvNeXt Base,6_15,streaky,3.164922260032416
+emotion,ConvNeXt Large,12_20,pointy,2.6637621386578747
+emotion,ConvNeXt Large,12_20,streaky,2.7001122768357337
+emotion,ConvNeXt Large,6_15,pointy,3.3116760091220985
+emotion,ConvNeXt Large,6_15,streaky,3.088097620960604
+emotion,ConvNeXt Small,12_20,pointy,3.5603763184191486
+emotion,ConvNeXt Small,12_20,streaky,3.6221748397830784
+emotion,ConvNeXt Small,6_15,pointy,3.4977388689996687
+emotion,ConvNeXt Small,6_15,streaky,3.0675389198659038
+emotion,ConvNeXt Tiny,12_20,pointy,2.9560762126366353
+emotion,ConvNeXt Tiny,12_20,streaky,3.03681986576667
+emotion,ConvNeXt Tiny,6_15,pointy,3.360824546388939
+emotion,ConvNeXt Tiny,6_15,streaky,3.1987795457610275
+emotion,DINOv3 ViT Base,12_20,pointy,2.8650061460421994
+emotion,DINOv3 ViT Base,12_20,streaky,2.3956536189667843
+emotion,DINOv3 ViT Base,6_15,pointy,1.5021096294536807
+emotion,DINOv3 ViT Base,6_15,streaky,2.2127282169983067
+emotion,ResNet18,12_20,pointy,0.4608542858484575
+emotion,ResNet18,12_20,streaky,0.4744571131529792
+emotion,ResNet18,6_15,pointy,0.43761931323618214
+emotion,ResNet18,6_15,streaky,0.44268672757286803
+emotion,ResNet50,12_20,pointy,0.6267453543547983
+emotion,ResNet50,12_20,streaky,0.6154555124970364
+emotion,ResNet50,6_15,pointy,0.568871738240159
+emotion,ResNet50,6_15,streaky,0.6766875771185094
+emotion,VGG11,12_20,pointy,2.6545163818060864
+emotion,VGG11,12_20,streaky,2.88167808820408
+emotion,VGG11,6_15,pointy,2.384648641743684
+emotion,VGG11,6_15,streaky,2.5828016029788676
+emotion,VGG13,12_20,pointy,2.6908968084006055
+emotion,VGG13,12_20,streaky,2.647071832549032
+emotion,VGG13,6_15,pointy,3.1714729597454516
+emotion,VGG13,6_15,streaky,2.7320588503334493
+emotion,VGG16,12_20,pointy,3.1246911581007293
+emotion,VGG16,12_20,streaky,3.163289850679185
+emotion,VGG16,6_15,pointy,2.947994576862976
+emotion,VGG16,6_15,streaky,2.782027037824352
+emotion,VGG19,12_20,pointy,3.2540399463243848
+emotion,VGG19,12_20,streaky,3.3556778678190478
+emotion,VGG19,6_15,pointy,3.009912732433283
+emotion,VGG19,6_15,streaky,3.0045563687016665
+emotion,ViT Base,12_20,pointy,3.6007997162611103
+emotion,ViT Base,12_20,streaky,3.5251574297394157
+emotion,ViT Base,6_15,pointy,3.1526463773029443
+emotion,ViT Base,6_15,streaky,3.408889325910654
+emotion,ViT Large,12_20,pointy,3.5090054773567587
+emotion,ViT Large,12_20,streaky,3.2490008836190736
+emotion,ViT Large,6_15,pointy,3.3598048787931556
+emotion,ViT Large,6_15,streaky,3.9205214481015425
+emotion,ViT Small,12_20,pointy,3.085540497587807
+emotion,ViT Small,12_20,streaky,2.818092981534404
+emotion,ViT Small,6_15,pointy,3.281767225686779
+emotion,ViT Small,6_15,streaky,3.1326296348033997
+shape,ConvNeXt Base,12_10,pointy,0.8933959587031061
+shape,ConvNeXt Base,12_10,streaky,0.7751201361182699
+shape,ConvNeXt Base,12_20,pointy,0.582341747238092
+shape,ConvNeXt Base,12_20,streaky,0.6710097247258621
+shape,ConvNeXt Base,6_10,pointy,1.231656762300092
+shape,ConvNeXt Base,6_10,streaky,1.4183867240528558
+shape,ConvNeXt Base,6_15,pointy,0.8391885289033015
+shape,ConvNeXt Base,6_15,streaky,1.0462326602119265
+shape,ConvNeXt Base,6_20,pointy,0.7373297383951716
+shape,ConvNeXt Base,6_20,streaky,0.8654072045875232
+shape,ConvNeXt Base,9_10,pointy,0.7850343664970657
+shape,ConvNeXt Base,9_10,streaky,1.0834298228186492
+shape,ConvNeXt Large,12_10,pointy,0.9881576112870009
+shape,ConvNeXt Large,12_10,streaky,0.923801304956732
+shape,ConvNeXt Large,12_20,pointy,0.5844251896984433
+shape,ConvNeXt Large,12_20,streaky,0.710017079134234
+shape,ConvNeXt Large,6_10,pointy,1.3841566948026316
+shape,ConvNeXt Large,6_10,streaky,1.5201174705343972
+shape,ConvNeXt Large,6_15,pointy,0.8542376611006036
+shape,ConvNeXt Large,6_15,streaky,1.1080302254901448
+shape,ConvNeXt Large,6_20,pointy,0.86154315541033
+shape,ConvNeXt Large,6_20,streaky,0.8600180261860286
+shape,ConvNeXt Large,9_10,pointy,0.8384361452256304
+shape,ConvNeXt Large,9_10,streaky,1.0060670975718893
+shape,ConvNeXt Small,12_10,pointy,1.391187379374272
+shape,ConvNeXt Small,12_10,streaky,1.0425962899747498
+shape,ConvNeXt Small,12_20,pointy,1.072948845500457
+shape,ConvNeXt Small,12_20,streaky,1.0521822257520728
+shape,ConvNeXt Small,6_10,pointy,1.4834330836689968
+shape,ConvNeXt Small,6_10,streaky,1.5306783166894506
+shape,ConvNeXt Small,6_15,pointy,1.1273996050791282
+shape,ConvNeXt Small,6_15,streaky,1.2867917803472644
+shape,ConvNeXt Small,6_20,pointy,1.0147491567333917
+shape,ConvNeXt Small,6_20,streaky,1.0826498082459206
+shape,ConvNeXt Small,9_10,pointy,1.1341151081254497
+shape,ConvNeXt Small,9_10,streaky,1.1296665376282358
+shape,ConvNeXt Tiny,12_10,pointy,1.38937920219234
+shape,ConvNeXt Tiny,12_10,streaky,1.059284280476216
+shape,ConvNeXt Tiny,12_20,pointy,0.9417121640272966
+shape,ConvNeXt Tiny,12_20,streaky,0.9942750825803813
+shape,ConvNeXt Tiny,6_10,pointy,1.5882184249296085
+shape,ConvNeXt Tiny,6_10,streaky,1.5570619828995909
+shape,ConvNeXt Tiny,6_15,pointy,1.1707900932843025
+shape,ConvNeXt Tiny,6_15,streaky,1.339653277511326
+shape,ConvNeXt Tiny,6_20,pointy,1.076013151748776
+shape,ConvNeXt Tiny,6_20,streaky,1.1653267527352336
+shape,ConvNeXt Tiny,9_10,pointy,1.3396197506259166
+shape,ConvNeXt Tiny,9_10,streaky,1.2351335447551939
+shape,DINOv3 ViT Base,12_10,pointy,1.2935042608510425
+shape,DINOv3 ViT Base,12_10,streaky,1.0099278645929475
+shape,DINOv3 ViT Base,12_20,pointy,0.2921347758609582
+shape,DINOv3 ViT Base,12_20,streaky,0.3994824531344719
+shape,DINOv3 ViT Base,6_10,pointy,1.979596171747535
+shape,DINOv3 ViT Base,6_10,streaky,1.5526762836893064
+shape,DINOv3 ViT Base,6_15,pointy,1.3749837534280835
+shape,DINOv3 ViT Base,6_15,streaky,0.811840427300864
+shape,DINOv3 ViT Base,6_20,pointy,1.3031563243872368
+shape,DINOv3 ViT Base,6_20,streaky,0.603720499909303
+shape,DINOv3 ViT Base,9_10,pointy,1.9301651480318123
+shape,DINOv3 ViT Base,9_10,streaky,1.3499153396051762
+shape,ResNet18,12_10,pointy,1.2977282352478756
+shape,ResNet18,12_10,streaky,1.2793720608154573
+shape,ResNet18,12_20,pointy,1.376805949328661
+shape,ResNet18,12_20,streaky,1.3453475862206912
+shape,ResNet18,6_10,pointy,1.1213363084148427
+shape,ResNet18,6_10,streaky,1.1289318746513581
+shape,ResNet18,6_15,pointy,1.3064341733148028
+shape,ResNet18,6_15,streaky,1.294932556015867
+shape,ResNet18,6_20,pointy,1.3405114378387346
+shape,ResNet18,6_20,streaky,1.3244335604997184
+shape,ResNet18,9_10,pointy,1.2743982329625172
+shape,ResNet18,9_10,streaky,1.248586282603122
+shape,ResNet50,12_10,pointy,1.6514546036516018
+shape,ResNet50,12_10,streaky,1.5646316134021623
+shape,ResNet50,12_20,pointy,1.6973520409291327
+shape,ResNet50,12_20,streaky,1.6085409369834014
+shape,ResNet50,6_10,pointy,1.490930878032542
+shape,ResNet50,6_10,streaky,1.462355533480272
+shape,ResNet50,6_15,pointy,1.5903916130843017
+shape,ResNet50,6_15,streaky,1.5943175251136117
+shape,ResNet50,6_20,pointy,1.6497404484806462
+shape,ResNet50,6_20,streaky,1.5976642483281118
+shape,ResNet50,9_10,pointy,1.6192262341238841
+shape,ResNet50,9_10,streaky,1.572606711235989
+shape,VGG11,12_10,pointy,5.846423490774748
+shape,VGG11,12_10,streaky,5.35908387527397
+shape,VGG11,12_20,pointy,5.225774778195228
+shape,VGG11,12_20,streaky,5.222023983280988
+shape,VGG11,6_10,pointy,5.3669847284059005
+shape,VGG11,6_10,streaky,5.045393675063213
+shape,VGG11,6_15,pointy,5.787973490740001
+shape,VGG11,6_15,streaky,5.56046655083372
+shape,VGG11,6_20,pointy,6.07815080626341
+shape,VGG11,6_20,streaky,5.6686872467269
+shape,VGG11,9_10,pointy,6.150070046665881
+shape,VGG11,9_10,streaky,5.5156702245857545
+shape,VGG13,12_10,pointy,5.495882479791949
+shape,VGG13,12_10,streaky,5.0229810807109585
+shape,VGG13,12_20,pointy,4.612836825321548
+shape,VGG13,12_20,streaky,4.574861968852246
+shape,VGG13,6_10,pointy,5.346754213723801
+shape,VGG13,6_10,streaky,4.442895926486641
+shape,VGG13,6_15,pointy,5.514599427386043
+shape,VGG13,6_15,streaky,4.8010301528031425
+shape,VGG13,6_20,pointy,5.47855904096811
+shape,VGG13,6_20,streaky,4.614468176461094
+shape,VGG13,9_10,pointy,5.337198918931047
+shape,VGG13,9_10,streaky,4.754734118367726
+shape,VGG16,12_10,pointy,4.457653638792364
+shape,VGG16,12_10,streaky,4.110319292110462
+shape,VGG16,12_20,pointy,4.210828765360394
+shape,VGG16,12_20,streaky,4.021399387270278
+shape,VGG16,6_10,pointy,4.658060116448001
+shape,VGG16,6_10,streaky,4.394914052265174
+shape,VGG16,6_15,pointy,4.43123713340777
+shape,VGG16,6_15,streaky,4.29229882393182
+shape,VGG16,6_20,pointy,4.496310471765422
+shape,VGG16,6_20,streaky,4.171425113325628
+shape,VGG16,9_10,pointy,4.978733491764782
+shape,VGG16,9_10,streaky,4.438795195504338
+shape,VGG19,12_10,pointy,4.180052132998369
+shape,VGG19,12_10,streaky,4.119079218110053
+shape,VGG19,12_20,pointy,4.1963773911575615
+shape,VGG19,12_20,streaky,4.024774591244004
+shape,VGG19,6_10,pointy,4.374856603831377
+shape,VGG19,6_10,streaky,3.8913447586025423
+shape,VGG19,6_15,pointy,4.314471314118996
+shape,VGG19,6_15,streaky,3.7734718797359625
+shape,VGG19,6_20,pointy,4.097893289144306
+shape,VGG19,6_20,streaky,3.984303948976788
+shape,VGG19,9_10,pointy,4.472628401762997
+shape,VGG19,9_10,streaky,4.06309926261097
+shape,ViT Base,12_10,pointy,1.4400113306685407
+shape,ViT Base,12_10,streaky,1.3906528869028054
+shape,ViT Base,12_20,pointy,1.3437362990259267
+shape,ViT Base,12_20,streaky,1.453090705746857
+shape,ViT Base,6_10,pointy,1.8377571975389724
+shape,ViT Base,6_10,streaky,1.7483221247399516
+shape,ViT Base,6_15,pointy,1.3224865861911872
+shape,ViT Base,6_15,streaky,1.7107581096642186
+shape,ViT Base,6_20,pointy,1.425129548512697
+shape,ViT Base,6_20,streaky,1.4541041314458225
+shape,ViT Base,9_10,pointy,1.4286777749609747
+shape,ViT Base,9_10,streaky,1.5111831749334526
+shape,ViT Large,12_10,pointy,1.9418381555748407
+shape,ViT Large,12_10,streaky,1.6880771908766237
+shape,ViT Large,12_20,pointy,1.7338510680452501
+shape,ViT Large,12_20,streaky,1.5359006962813007
+shape,ViT Large,6_10,pointy,1.7561033141549922
+shape,ViT Large,6_10,streaky,1.8856029680961068
+shape,ViT Large,6_15,pointy,1.76596467894165
+shape,ViT Large,6_15,streaky,1.712445149424635
+shape,ViT Large,6_20,pointy,1.625796023151543
+shape,ViT Large,6_20,streaky,1.8105675141973403
+shape,ViT Large,9_10,pointy,2.0442850079708115
+shape,ViT Large,9_10,streaky,1.8742852295522932
+shape,ViT Small,12_10,pointy,1.2708448759974738
+shape,ViT Small,12_10,streaky,1.1677817607135346
+shape,ViT Small,12_20,pointy,0.8344145347374586
+shape,ViT Small,12_20,streaky,0.9245585897196879
+shape,ViT Small,6_10,pointy,1.6438485759916162
+shape,ViT Small,6_10,streaky,1.6407486929050068
+shape,ViT Small,6_15,pointy,1.1960210750225093
+shape,ViT Small,6_15,streaky,1.4628474580443729
+shape,ViT Small,6_20,pointy,1.1038955723422117
+shape,ViT Small,6_20,streaky,1.20412751359564
+shape,ViT Small,9_10,pointy,1.2778916870955264
+shape,ViT Small,9_10,streaky,1.2326644198418009
